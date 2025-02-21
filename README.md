@@ -29,20 +29,7 @@ pip install argparse pytest
 
 ## ⚙️ 快速上手
 
-### 1. 启动 Gradio 预测界面
-```bash
-python app.py
-```
-访问地址：`http://localhost:7860`
-
-#### 界面功能说明
-| 组件          | 说明                          |
-|---------------|-----------------------------|
-| 文件上传      | 支持 `.smi`/.mol` 格式文件      |
-| 预测按钮      | 实时触发LOXL2 靶向预测              |
-| 结果展示      | 显示LOXL2 靶向概率（百分比格式）       |
-
-### 2. 批量预测脚本
+批量预测脚本
 ```bash
 python test.py --data_path tcm-screen.csv --output predictions.tsv
 ```
