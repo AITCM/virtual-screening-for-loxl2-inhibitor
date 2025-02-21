@@ -71,4 +71,5 @@ python test.py --data_path tcm-screen.csv --output predictions.tsv
 MIT License  
 
 
-> 💡 提示：首次运行前请执行 `pip install -r requirements.txt` 安装依赖
+> 💡 提示：推荐优先使用conda 环境 environment.yml
+> 也可执行 `pip install -r requirements.txt` 安装依赖
