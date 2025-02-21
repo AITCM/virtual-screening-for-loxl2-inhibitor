@@ -1,4 +1,4 @@
-![0754F90305A17F0F95A4FE024B8D328D](https://github.com/user-attachments/assets/9ed6edf8-936f-4500-bc5f-8a926e637c7a)```markdown
+
 # LOXL2 Inhibitor Prediction Model
 
 ## 📌 项目概述
