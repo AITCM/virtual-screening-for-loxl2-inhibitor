@@ -1,0 +1,44 @@
+name: loxl2_env
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+
+dependencies:
+  - python=3.8
+  - pytorch=1.8.1+cu102  # 对应 CUDA 10.2
+  - torchaudio=0.8.1
+  - torchvision=0.9.1+cu102
+  - torchtext=0.9.1
+  - torch-geometric=2.0.3
+  - dgl-cu111=0.7.2
+  - rdkit=2021.9.4  # 分子处理必备
+  - pandas=1.1.5
+  - scikit-learn=0.24.2
+  - numpy=1.19.5
+  - click>=7.1.2      # 修复版本冲突
+  - tqdm=4.64.1
+  - matplotlib=3.3.4
+  - seaborn=0.9.0
+  - jupyterlab=3.2.1  # 开发调试可选
+
+# 显式排除冲突包
+- ipykernel  # 避免与JupyterLab版本冲突
+- python-dotenv  # 项目未使用但可能引起冲突
+
+# 环境变量配置（可选）
+variables:
+  CUDA_VISIBLE_DEVICES: "0"  # GPU加速设置
+
+# 测试命令
+test:
+  commands:
+    - python -c "import torch; print(torch.cuda.is_available())"  # 验证GPU支持
+    - python app.py  # 运行Gradio界面测试
+    - python test.py --data_path test.csv  # 批量预测测试
+
+# 文档说明
+about:
+  home: https://github.com/your-repo/LOXL2-inhibitor-model
+  license: MIT
+  summary: "LOXL2 inhibitor prediction model with PyTorch and Gradio interface"
