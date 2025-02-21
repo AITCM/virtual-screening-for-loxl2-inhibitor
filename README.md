@@ -1,4 +1,4 @@
-```markdown
+![0754F90305A17F0F95A4FE024B8D328D](https://github.com/user-attachments/assets/9ed6edf8-936f-4500-bc5f-8a926e637c7a)```markdown
 # LOXL2 Inhibitor Prediction Model
 
 ## 📌 项目概述
@@ -63,6 +63,7 @@ python test.py --data_path tcm-screen.csv --output predictions.tsv
 1. **GPU 加速**：使用 `CUDA_VISIBLE_DEVICES=0` 指定 GPU 设备
 2. **内存限制**：批量预测时建议设置 `max_norm=5.0` 防止显存溢出
 3. **模型恢复**：若遇到 `KeyError: 'config'`，请检查 `best_model_best.pth` 是否完整
+4. 模型权重可参考：链接：https://pan.baidu.com/s/1Zeer3ezQl3ncqzH1La-7dw 提取码：tnty 
 
 ## 📜 许可证
 MIT License  
