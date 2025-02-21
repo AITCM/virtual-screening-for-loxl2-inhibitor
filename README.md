@@ -4,7 +4,7 @@
 ## 📌 项目概述
 这是一个基于图卷积神经网络（GCN）的LOXL2抑制剂活性预测模型，实现了以下核心功能：
 - **实时单样本预测**：通过 Gradio 界面上传化合物 SMILES 文件进行毒性概率预测
-- **批量预测**：使用 `test.py` 脚本处理多组测试数据
+- **批量预测**：使用 `testing.py` 脚本处理多组测试数据
 - **环境一致性**：严格复现训练环境的模型结构和超参数配置
 
 ## 🛠️ 环境准备
@@ -15,13 +15,15 @@
 
 ### 软件依赖
 ```bash
-# 核心依赖（生产环境）
+# 核心依赖
 python=3.6
-pip install gradio torch==1.8.1+cu102 torchvision==0.9.1+cu102 \
+conda env create -f environment.yml
+conda activate loxl2_env
+pip install  torch==1.8.1+cu102 torchvision==0.9.1+cu102 \
     torchtext==0.9.1 torch-geometric==2.0.3 dgl-cu111 numpy==1.19.5 \
     pandas==1.1.5 scikit-learn==0.24.2
 
-# 开发调试依赖（可选）
+# 开发调试依赖
 pip install argparse pytest
 ```
 
